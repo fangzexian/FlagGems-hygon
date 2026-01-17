@@ -18,6 +18,7 @@ from .div import (
     true_divide,
     true_divide_,
 )
+from .exponential_ import exponential_
 from .gelu import gelu, gelu_
 from .isclose import allclose, isclose
 from .isin import isin
@@ -44,6 +45,7 @@ __all__ = [
     "any",
     "any_dim",
     "any_dims",
+    "exponential_",
     "div_mode",
     "div_mode_",
     "flash_attention_forward",
