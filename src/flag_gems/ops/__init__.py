@@ -1,4 +1,5 @@
 from flag_gems.ops.abs import abs, abs_
+from flag_gems.ops.acos import acos
 from flag_gems.ops.add import add, add_
 from flag_gems.ops.addcdiv import addcdiv
 from flag_gems.ops.addcmul import addcmul
@@ -216,6 +217,7 @@ from flag_gems.ops.triu import triu
 from flag_gems.ops.uniform import uniform_
 from flag_gems.ops.unique import _unique2
 from flag_gems.ops.upsample_bicubic2d_aa import _upsample_bicubic2d_aa
+from flag_gems.ops.upsample_nearest1d import upsample_nearest1d
 from flag_gems.ops.upsample_nearest2d import upsample_nearest2d
 from flag_gems.ops.var_mean import var_mean
 from flag_gems.ops.vdot import vdot
@@ -240,13 +242,16 @@ __all__ = [
     "_upsample_bicubic2d_aa",
     "abs",
     "abs_",
+    "acos",
     "add",
     "add_",
     "addcdiv",
+    "addcmul",
     "addmm",
     "addmm_out",
     "addmv",
     "addmv_out",
+    "addr",
     "all",
     "all_dim",
     "all_dims",
@@ -348,6 +353,7 @@ __all__ = [
     "gelu",
     "gelu_",
     "gelu_backward",
+    "get_scheduler_metadata",
     "glu",
     "glu_backward",
     "group_norm",
@@ -426,6 +432,7 @@ __all__ = [
     "ones",
     "ones_like",
     "pad",
+    "per_token_group_quant_fp8",
     "polar",
     "pow_scalar",
     "pow_tensor_scalar",
@@ -444,8 +451,6 @@ __all__ = [
     "reciprocal_",
     "relu",
     "relu_",
-    "addcmul",
-    "softplus",
     "remainder",
     "remainder_",
     "repeat",
@@ -462,12 +467,13 @@ __all__ = [
     "rsqrt",
     "rsqrt_",
     "scaled_dot_product_attention",
-    "scaled_dot_product_attention_forward",
     "scaled_dot_product_attention_backward",
-    "ScaleDotProductAttention",
+    "scaled_dot_product_attention_forward",
+    "scaled_softmax_backward",
+    "scaled_softmax_forward",
     "scatter",
-    "scatter_add_",
     "scatter_",
+    "scatter_add_",
     "select_scatter",
     "sigmoid",
     "sigmoid_",
@@ -480,6 +486,7 @@ __all__ = [
     "slice_scatter",
     "softmax",
     "softmax_backward",
+    "softplus",
     "sort",
     "sort_stable",
     "stack",
@@ -490,6 +497,8 @@ __all__ = [
     "sum_dim",
     "sum_dim_out",
     "sum_out",
+    "ScaleDotProductAttention",
+    "SUPPORTED_FP8_DTYPE",
     "tan",
     "tan_",
     "tanh",
@@ -506,14 +515,12 @@ __all__ = [
     "true_divide_out",
     "true_divide_",
     "uniform_",
+    "upsample_nearest1d",
     "upsample_nearest2d",
     "var_mean",
     "vdot",
-    "addr",
     "vector_norm",
     "vstack",
-    "per_token_group_quant_fp8",
-    "SUPPORTED_FP8_DTYPE",
     "weight_norm_interface",
     "weight_norm_interface_backward",
     "where_scalar_other",
@@ -522,7 +529,4 @@ __all__ = [
     "where_self_out",
     "zeros",
     "zeros_like",
-    "get_scheduler_metadata",
-    "scaled_softmax_forward",
-    "scaled_softmax_backward",
 ]
