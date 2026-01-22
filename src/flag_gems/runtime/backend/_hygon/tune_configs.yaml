@@ -1321,13 +1321,13 @@ index_put:
       BLOCK_SIZE0: block_size0
       BLOCK_SIZE1: block_size1
   block_size0:
-  # - 1
-  # - 2
-  - 8
+    - 8
+    - 16
+    - 32
   block_size1:
-  - 256
-  - 512
-  - 1024
+    - 128
+    - 256
+    - 512
 kron:
   - gen: true
     param_map:

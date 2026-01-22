@@ -21,6 +21,7 @@ from .div import (
 from .exponential_ import exponential_
 from .fill import fill_scalar, fill_scalar_, fill_tensor, fill_tensor_
 from .gelu import gelu, gelu_
+from .index_put import index_put, index_put_
 from .isclose import allclose, isclose
 from .isin import isin
 from .mm import mm
@@ -59,6 +60,8 @@ __all__ = [
     "floor_divide_",
     "gelu",
     "gelu_",
+    "index_put",
+    "index_put_",
     "isin",
     "isclose",
     "mm",
