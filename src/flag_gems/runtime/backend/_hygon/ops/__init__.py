@@ -36,6 +36,7 @@ from .pow import (
 from .randperm import randperm
 from .silu import silu, silu_, silu_backward
 from .sort import sort, sort_stable
+from .to import to_copy
 from .unique import _unique2
 
 __all__ = [
@@ -83,6 +84,7 @@ __all__ = [
     "silu_backward",
     "sort",
     "sort_stable",
+    "to_copy",
     "true_divide",
     "true_divide_",
 ]
